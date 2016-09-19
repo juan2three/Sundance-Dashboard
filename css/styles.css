@@ -1,0 +1,189 @@
+#main{
+	background-color: #0dbeb0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+}
+#events{
+	background-color: #fea238;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#quotes{
+	background-color: #7ac454;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.sundancesun{
+	background-image: url("../images/sundancesun.png");
+	background-size: 111%;
+    background-position: -250px 10px;
+    background-repeat: no-repeat;
+    height: 2000px;
+
+}
+.sundancesun-white{
+	background-image: url("../images/sundancesun-white.png");
+	background-size: 111%;
+    background-position: -250px 10px;
+    background-repeat: no-repeat;
+
+
+}
+.logo{
+	vertical-align: middle;
+    width: 45%;
+    padding-bottom: 450px;
+    padding-top: 530px;
+    /* padding-right: 38px; */
+    position: relative;
+    left: 85px;
+    opacity: 1.9;
+}
+#time{
+	font-size: 16em;
+	color:#FFF;
+	padding-top: 60px;
+	font-family: "proxima-nova-alt";
+	margin-right: 20px;
+	font-weight: 200;
+}
+#title{
+	font-size: 8em;
+	color:#FFF;
+	padding-top: 60px;
+	font-family: "proxima-nova-alt";
+	margin-right: 20px;
+	font-weight: 200;
+}
+#weather{
+	color: #FFF;
+	border: solid 6px #0ca89c;
+	border-radius: 24pt;
+	margin-left: 17%;
+    margin-right: 17%;
+	font-size: 12em;
+    font-family: "proxima-nova-alt";
+
+}
+#weather-description{
+	font-family: inherit;
+	font-weight: 100;
+    font-size: 37pt;
+    text-transform: uppercase;
+}
+.weather-number{
+	margin-bottom: -24%;
+	position: relative;
+    left: 35px;
+    font-size: 190px;
+    font-family: inherit;
+    font-weight: 100;
+    padding-top: 30px;
+}
+#date{
+	font-size: 5em;
+	color:#FFF;
+	font-family: "proxima-nova-alt";
+	margin-top: -50px;
+	padding-bottom: 110px;
+	font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+#list{
+	font-size: 5em;
+	color:#FFF;
+	font-family: "proxima-nova-alt";
+	font-weight: bolder;
+    text-transform: uppercase;
+        margin-left: -255px;
+    margin-top: 40px;
+
+}
+#quotes{
+	font-size: 65px;
+	color:#FFF;
+	font-family: "proxima-nova-alt";
+	font-weight: bolder;
+    text-transform: uppercase;
+}
+#quotebox{
+	border: solid 6px #FFF;
+    border-radius: 15px;
+    padding: 100px 50px 100px 50px;
+    margin-right: 190px;
+    margin-left: 190px;;
+}
+p.lead {
+    font-weight: bold;
+    font-style: italic;
+
+}
+.right{
+	position: relative;
+	right: 100px;
+	margin-top: 100px;
+}
+.text {
+    max-width: 700px;
+    max-height: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 100px;
+    position: relative;
+	z-index: 2;
+}
+.close-quotes{
+	position: relative;
+    z-index: 1;
+    left: 1125px;
+    top: 115px;
+}
+.open-quotes{
+	position: relative;
+    z-index: 1;
+    left: 433px;
+    top: -78px;
+
+}
+#twitter{
+	background-color: #FFF;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#example1{
+	font-size: 20px;
+}
+#twitter-pic{
+	border-radius: 27px;
+    width: 50%;
+}
+.list {
+	list-style-type:none;
+	border-bottom: 2px solid #f3f3f3;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+p.timePosted.text-center {
+    border: 7px solid #f3f3f3;
+    width: 9%;
+    border-radius: 12px;
+    padding: 3px;
+    text-transform: uppercase;
+    color: #4bc1b3;
+    margin-left: -95px;
+}
+.timePosted a{
+	text-decoration: none;
+	color: #4bc1b3;
+}
+.user a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
+.tweet a{
+	color: #000;
+}
