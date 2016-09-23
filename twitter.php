@@ -6,7 +6,7 @@ $sec = "10";
 <!doctype html>
 <html>
 <head>
- <meta http-equiv="refresh" content="<?php echo $sec?>;URL='index.php'">
+ <meta http-equiv="refresh" content="<?php echo $sec?>;URL='video.html'">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>CLNDR Demo</title>
     <meta charset="UTF-8">

@@ -6,7 +6,7 @@ $sec = "10";
 <!doctype html>
 <html>
 <head>
-   <!-- <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">!-->
+    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='twitter.php'">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>CLNDR Demo</title>
     <meta charset="UTF-8">
@@ -28,24 +28,33 @@ $sec = "10";
     <div class="row">
     <div class="col-md-6">
     <div class="sundancesun"> 
-        <img class="logo" src="images/sundancelogo.png"><img class='close-quotes' src='images/close-quotes.png'>
-        <img class='open-quotes' src='images/open-quotes.png'>
+        <img class="logo" src="images/sundancelogo.png">
 
    </div>
-    </div>
-    <div class="col-md-6 right">
-        <div class="text-center" id="title">
-        <h1>From the desk of</h1>
-        <h2>John Ruggieri</h2>
-         <div>
+    </div>    
          <?php
+$now = date('F');
+echo "<div class='col-md-6 right names'>
+        <div class='text-center' id='title'>
+        <h3>$now's</h3>
+        <h1 class='title'>Continuous<br>
+        Improvement </h1>
+        <h2>winners</h2>
 
+         <div>";
 
-$lines = file('quotes.JSON');
-echo "<div id='quotebox'><div class='text'>
- <p class='lead'>";
-echo $lines[array_rand($lines)];
-echo "</p></div></div>"
+$lines = file('winners.txt');
+echo "<div class='text'>";
+ foreach ($lines as $number) {
+    $name = explode('|', $number);
+    echo "<div class='name'> $name[0] </div>";
+    echo "<br>";
+    echo "<div class='idea'> $name[1] </div>";
+     echo "<br>";
+ }
+
+echo "</div>
+<div class='submit'>Submit your ideas to Dave</div>"
 ?>
     </div>
 

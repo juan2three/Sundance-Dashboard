@@ -1,12 +1,12 @@
 
 <?php
 $page = $_SERVER['PHP_SELF'];
-$sec  = "25";
+$sec  = "10";
 ?>
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="refresh" content="<?php echo $sec;?>;URL='twitter.html'">
+<meta http-equiv="refresh" content="<?php echo $sec;?>;URL='lean.php'">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Clients</title>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@ $sec  = "25";
 
     <div class="text-center" id="event-list"><?php
 
-$url = 'https://www.googleapis.com/calendar/v3/calendars/i7r3fglq4muof8mqkpf6a4ig3c%40group.calendar.google.com/events?key=AIzaSyAAocH6YyopWpEfVD8XfGxqmCbaSUUmm3g';
+$url = 'https://www.googleapis.com/calendar/v3/calendars/9hqtea8k8rlin07vfolg1oqs9g%40group.calendar.google.com/events?key=AIzaSyBChWJmNLkmntozxqjWvJVPplApVLEGzLc';
 $ch  = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -60,7 +60,7 @@ echo "<div id='list'>";
 
 
 
-$today = date('Y-m-d');
+$now = date(DATE_ATOM, mktime());
 
 
 $cnt = 0;
@@ -69,17 +69,18 @@ $cnt = 0;
 
 foreach ($jason['items'] as $item) {
     
-    if (preg_match("/$today/", $item['start']['date'])) {
+    if ($item['start']['dateTime'] <=  $now && $item['end']['dateTime'] >=  $now ) {
         
-        if (preg_match('/welcome/', $item['summary'])) {
-            echo str_replace("welcome", "", $item['summary']);
+        if (preg_match('/Client:/', $item['summary'])) {
+            echo str_replace("Client:", "", $item['summary']);
+            echo "<br>";
             $cnt++;
         }
     }
 }
 
 if ($cnt == 0) {
-    echo "<script language='Javascript'>document.location.replace('twitter.html');</script>";
+   echo "<script language='Javascript'>document.location.replace('lean.php');</script>";
 }
 
 

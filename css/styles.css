@@ -10,7 +10,12 @@
 	overflow-y: hidden;
 }
 #quotes{
-	background-color: #7ac454;
+	background-color: #8dc63f;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#video{
+	background-color: #000;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -34,10 +39,10 @@
 	vertical-align: middle;
     width: 45%;
     padding-bottom: 450px;
-    padding-top: 530px;
+    padding-top: 490px;
     /* padding-right: 38px; */
     position: relative;
-    left: 85px;
+    left: 65px;
     opacity: 1.9;
 }
 #time{
@@ -118,19 +123,16 @@
 p.lead {
     font-weight: bold;
     font-style: italic;
-
+        font-size: 75px;
 }
 .right{
 	position: relative;
 	right: 100px;
-	margin-top: 100px;
+	margin-top: 200px;
 }
 .text {
-    max-width: 700px;
-    max-height: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    font-size: 100px;
+
+    font-size: 0px;
     position: relative;
 	z-index: 2;
 }
@@ -186,4 +188,22 @@ p.timePosted.text-center {
 }
 .tweet a{
 	color: #000;
+}
+.submit{
+	font-size: 35pt;
+	font-weight: bold;
+	color: #515151;
+}
+.idea {
+    font-size: 25pt;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+.name{
+	font-weight: bold;
+    font-style: italic;
+    font-size: 75px;
+}
+.col-md-6.right.names {
+    margin-top: 100px;
 }

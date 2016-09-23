@@ -37,7 +37,7 @@ $sec = "10";
 
                 <div class="text-center" id="event-list"><?php
 
-                    $url = 'https://www.googleapis.com/calendar/v3/calendars/i7r3fglq4muof8mqkpf6a4ig3c%40group.calendar.google.com/events?key=AIzaSyAAocH6YyopWpEfVD8XfGxqmCbaSUUmm3g';
+                    $url = 'https://www.googleapis.com/calendar/v3/calendars/9hqtea8k8rlin07vfolg1oqs9g%40group.calendar.google.com/events?key=AIzaSyBChWJmNLkmntozxqjWvJVPplApVLEGzLc';
                     $ch = curl_init();  
 
                     curl_setopt($ch,CURLOPT_URL,$url);
@@ -67,8 +67,8 @@ $sec = "10";
 
                         if (preg_match("/$today/", $item['start']['date'] ) ) {
 
-                            if (preg_match('/bday/', $item['summary'])) {
-                                echo str_replace("bday", "",  $item['summary']);
+                            if (preg_match('/Birthday:/', $item['summary'])) {
+                                echo str_replace("Birthday:", "",  $item['summary']);
                                 echo "<br>";
                                 $cnt++;
                             }
