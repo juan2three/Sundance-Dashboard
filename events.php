@@ -1,7 +1,7 @@
 
 <?php
 $page = $_SERVER['PHP_SELF'];
-$sec  = "10";
+$sec  = "45";
 ?>
 <!doctype html>
 <html>
@@ -10,10 +10,10 @@ $sec  = "10";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Clients</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/weather-icons.css">
-    <link rel="stylesheet" href="./css/weather-icons-wind.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css?rndstr=<%= getRandomStr() %>">
+    <link rel="stylesheet" href="./css/weather-icons.css?rndstr=<%= getRandomStr() %>">
+    <link rel="stylesheet" href="./css/weather-icons-wind.css?rndstr=<%= getRandomStr() %>">
+    <link rel="stylesheet" href="./css/bootstrap.css?rndstr=<%= getRandomStr() %>">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
@@ -94,8 +94,8 @@ if ($cnt == 0) {
     
     </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="demo.js"></script>
-    <script src="js/timeanddate.js"></script>
+    <script src="demo.js?rndstr=<%= getRandomStr() %>"></script>
+    <script src="js/timeanddate.js?rndstr=<%= getRandomStr() %>"></script>
      <script type="text/javascript" src="js/twitterFetcher.js"></script>
     <script type="text/javascript" src="js/exampleUsage.js"></script>
 </body>

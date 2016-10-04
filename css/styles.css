@@ -155,7 +155,10 @@ p.lead {
 	overflow-y: hidden;
 }
 #example1{
-	font-size: 20px;
+	font-size: 33px;
+    padding-top: 80px;
+    padding-left: 85px;
+    padding-right: 100px;
 }
 #twitter-pic{
 	border-radius: 27px;
@@ -169,13 +172,14 @@ p.lead {
 }
 
 p.timePosted.text-center {
-    border: 7px solid #f3f3f3;
-    width: 9%;
+ border: 7px solid #f3f3f3;
+    width: 13%;
     border-radius: 12px;
-    padding: 3px;
+    padding: 0px;
     text-transform: uppercase;
     color: #4bc1b3;
-    margin-left: -95px;
+    margin-left: -120px;
+
 }
 .timePosted a{
 	text-decoration: none;
