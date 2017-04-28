@@ -1,13 +1,5 @@
 
  	
-PHP Beautifier
-Beautify and format your PHP code
- 
-Here is your PHP code :
- 	
- Source
- 
-See as Text 	
 
 <?php
 $page = $_SERVER['PHP_SELF'];
@@ -91,12 +83,5 @@ if ($cnt == 0)
 
 
  
- 
-Site Info  |  Disclaimer  |  Privacy 
-Site Network  |  Add to favorites	
-© 2009-2017 PHP Beautifier - All rights reserved 
- 
-Related terms: programming, coding, php, scripts, dev,
-programmers, code, Zend, Pear, javascript
- 
+
  
