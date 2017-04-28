@@ -1,12 +1,12 @@
-
 <?php
 $page = $_SERVER['PHP_SELF'];
-$sec  = "45";
+$sec = "45";
 ?>
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="refresh" content="<?php echo $sec;?>;URL='lean.php'">
+<meta http-equiv="refresh" content="<?php
+echo $sec; ?>;URL='lean.php'">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Clients</title>
     <meta charset="UTF-8">
@@ -39,50 +39,41 @@ $sec  = "45";
     </div>
 
     <div class="text-center" id="event-list"><?php
-
 $url = 'https://www.googleapis.com/calendar/v3/calendars/9hqtea8k8rlin07vfolg1oqs9g%40group.calendar.google.com/events?key=AIzaSyBChWJmNLkmntozxqjWvJVPplApVLEGzLc';
-$ch  = curl_init();
-
+$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//  curl_setopt($ch,CURLOPT_HEADER, false); 
+
+//  curl_setopt($ch,CURLOPT_HEADER, false);
 
 $output = curl_exec($ch);
-
 curl_close($ch);
-//echo "<pre>";
+
+// echo "<pre>";
+
 $data = json_decode($output, true);
-
-
 $jason = json_decode($output, true);
-
 echo "<div id='list'>";
-
-
-
 $now = date(DATE_ATOM, mktime());
-
-
 $cnt = 0;
 
+foreach($jason['items'] as $item)
+	{
+	if ($item['start']['dateTime'] <= $now && $item['end']['dateTime'] >= $now)
+		{
+		if (preg_match('/Client:/', $item['summary']))
+			{
+			echo str_replace("Client:", "", $item['summary']);
+			echo "<br />";
+			$cnt++;
+			}
+		}
+	}
 
-
-foreach ($jason['items'] as $item) {
-    
-    if ($item['start']['dateTime'] <=  $now && $item['end']['dateTime'] >=  $now ) {
-        
-        if (preg_match('/Client:/', $item['summary'])) {
-            echo str_replace("Client:", "", $item['summary']);
-            echo "<br>";
-            $cnt++;
-        }
-    }
-}
-
-if ($cnt == 0) {
-   echo "<script language='Javascript'>document.location.replace('lean.php');</script>";
-}
-
+if ($cnt == 0)
+	{
+	echo "<script language='Javascript'>document.location.replace('lean.php');</script>";
+	}
 
 ?>
    </div>
